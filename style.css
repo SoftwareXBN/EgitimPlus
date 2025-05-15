@@ -1,0 +1,609 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    scroll-behavior: smooth;
+    text-align: center;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.603);
+    color: #fff;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 3px solid #333;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.logo img {
+    width: 200px;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #357ab8;
+}
+
+#hero {
+    height: 100vh;
+    background: url(Image/index-html-background-img.png) center/cover no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 0 1rem;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#hero .content {
+    position: relative;
+    max-width: 700px;
+    background-color: hsla(0, 1%, 30%, 0.733);
+    padding: 2rem;
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    color: #fff;
+}
+
+#about .about-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+#about h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#about .about-box {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    transition: transform 0.3s;
+}
+
+#about .about-box h2 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    color: #0f4c75;
+}
+
+.about-box p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.about-box:hover {
+    transform: translateY(-5px);
+}
+
+.btn, .btn-main-box {
+    background: #3498db;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+    margin: 0.5rem auto 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-main-box {
+    background: #315176;
+}
+
+.btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.btn-main-box:hover {
+    background: #213752;
+}
+
+.btn a, .btn-main-box a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    text-align: center;
+}
+
+.main {
+    padding: 4rem 2rem;
+    border-bottom: 4px solid #e0e0e0;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.main h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #3498db; 
+    display : inline-block;
+    padding-bottom: 0.6rem;
+    letter-spacing: 1px; 
+}
+
+.main .lead p, .main p {
+    font-size: 1.1rem; 
+    color: #555;
+    line-height: 1.7; 
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left; 
+}
+
+.sections-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#age-groups, #interactive, #support, #mission {
+    width: 48%; 
+    min-height: 220px;
+    padding: 1.5rem;
+    margin: 0 1% 1rem;
+    border-bottom: 4px solid #949494;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#age-groups h2, #interactive h2, #support h2, #mission h2 {
+    font-size: 1.5rem;
+    color: black; 
+    margin-bottom: 1rem;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+}
+
+#age-groups p, #interactive p, #support p, #mission p {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.scrollable-box {
+  height: 300px; 
+  overflow-y: auto; 
+  padding-right: 10px; 
+}
+
+.scroll-content {
+  padding-right: 5px;
+}
+
+.scrollable-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable-box::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 10px;
+}
+
+.scrollable-box::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+.cards {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 60px;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #34495e;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.blog-post {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.blog-post h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.blog-post p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.blog-post a {
+  display: inline-block;
+  color: #0077cc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#anasayfa ul,#egitim ul,#blog ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+#anasayfa ul li::before,#egitim ul li::before,#blog ul li::before {
+    content: "→";
+    margin-right: 10px; 
+    color: yellow; 
+    font-size: 1.6em;
+    line-height: 1; 
+}
+#anasayfa ul li,#egitim ul li,#blog ul li {
+    display: flex; 
+    align-items: center; 
+}
+#anasayfa h3,#egitim h3,#blog ul h3 {
+    font-size: 24px;
+}
+#anasayfa {
+    padding-left: 10%;
+}
+#egitim {
+    padding-right: 3%;
+}
+#blog{
+    padding-right: 15%;
+}
+#footer {
+    display: flex; 
+    justify-content: space-between; 
+}
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+footer p{
+    text-align: center;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.contact-content {
+  max-width: 700px;
+  margin: 50px auto;
+  font-family: 'Comfortaa', cursive, sans-serif;
+  color: #222;
+  padding: 0 20px;
+  line-height: 1.6;
+}
+
+.contact-content h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.contact-content p {
+  font-weight: 300;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.contact-info h2,
+.contact-form h2 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #34495e;
+  border-bottom: 2px solid #2980b9;
+  padding-bottom: 5px;
+}
+
+.contact-info p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.contact-info a {
+  color: #2980b9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #1abc9c;
+}
+
+.contact-form label {
+  font-weight: 500;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 6px;
+  color: #2c3e50;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1.5px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Comfortaa', cursive, sans-serif;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #2980b9;
+  background-color: #f0f8ff;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 15px;
+  background-color: #2980b9;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Comfortaa', cursive, sans-serif;
+}
+
+.contact-form button:hover {
+  background-color: #1abc9c;
+}
+
+/* Mobil ekranlar için temel breakpoint: 768px altı */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 150px; /* Daha küçük logo */
+        margin: 0 auto;
+    }
+
+    nav {
+        margin: 1rem 0 0 0;
+    }
+
+    nav a {
+        margin-left: 1rem;
+        font-size: 16px;
+    }
+
+    #hero {
+        height: auto; /* yükseklik otomatik */
+        padding: 3rem 1rem 4rem;
+    }
+
+    #hero .content {
+        max-width: 90%;
+        padding: 1.5rem;
+        background-color: hsla(0, 1%, 30%, 0.85);
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    #about .about-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    #about .about-box {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .main {
+        padding: 2rem 1rem;
+        max-width: 95%;
+    }
+
+    .main h1 {
+        font-size: 2rem;
+    }
+
+    .main .lead p, .main p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .sections-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #age-groups, #interactive, #support, #mission {
+        width: 90%;
+        min-height: auto;
+        margin: 1rem auto;
+        border-bottom: 2px solid #ccc;
+        padding: 1rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr; /* Kartlar tek sütunda */
+        gap: 1.2rem;
+        max-width: 95%;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .blog-list {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    #anasayfa, #egitim, #blog {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    .contact-content {
+        margin: 30px 1rem;
+        padding: 0 10px;
+    }
+
+    .contact-content h1 {
+        font-size: 2rem;
+    }
+
+    .contact-info h2, .contact-form h2 {
+        font-size: 1.4rem;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .contact-form button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+

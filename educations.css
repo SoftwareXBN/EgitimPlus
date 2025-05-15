@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+      background: url('Image/pexels-pixabay-301920.jpg') center/cover no-repeat;
+      color: white;
+      min-height: 100vh;
+    }
+
+header {
+    background: rgba(0, 0, 0, 0.603);
+    color: #fff;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 3px solid #333;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.logo img {
+    width: 200px;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #357ab8;
+}
+
+
+main.educations {
+  position: relative;
+  padding: 4rem 2rem;
+  z-index: 1;
+  min-height: 100vh
+}
+
+main.educations::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(158, 158, 158, 0.308), rgba(85, 85, 85, 0.5));
+  z-index: 0;
+}
+
+main.educations > * {
+  position: relative;
+  z-index: 2;
+}
+
+.educations h2 {
+  text-align: center;
+  font-size: 2.75rem;
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.education-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.education-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 24px;
+  height: 320px;
+  overflow-y: auto;
+  color: #f1f1f1;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.4s ease, background 0.4s ease;
+  scrollbar-width: thin;
+  scrollbar-color: #aaa transparent;
+}
+
+.education-card:hover {
+  transform: translateY(-12px);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.education-card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.education-card::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 10px;
+}
+
+.education-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.education-card a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.education-card a p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+@media (max-width: 600px) {
+  .education-card {
+    height: auto;
+    max-height: 320px;
+  }
+}
+
+main {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(18, 18, 18, 0.85); /* Daha şeffaf arka plan */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Derin gölge */
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+hr {
+  margin: 30px 0;
+  border: 1px solid #444;
+  background-color: #444;
+}
+
+/* Ders kutuları */
+.lesson-box {
+  background-color: rgba(44, 44, 44, 0.7); /* Daha fazla şeffaflık */
+  padding: 30px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Daha belirgin gölge */
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lesson-box:hover {
+  transform: translateY(-5px); /* Hoverda yukarı kayma efekti */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Hoverda derinleşen gölge */
+}
+
+.lesson-box h3 {
+  color: #4CAF50; /* Yeşil başlık */
+  font-size: 1.8em;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.lesson-box p {
+  font-size: 1.1em;
+  line-height: 1.7;
+}
+
+.lesson-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.lesson-box ul li {
+  padding: 12px 0;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #c7c7c7;
+}
+
+.lesson-box ul li a {
+  color: #76c7b7; /* Açık yeşil bağlantı rengi */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.lesson-box ul li a:hover {
+  text-decoration: underline;
+  color: #4CAF50;
+}
+
+/* Konu Başlıkları */
+h3 {
+  color: #ffffff;
+  font-size: 1.6em;
+  margin-bottom: 15px;
+}
+
+/* Mobil uyumluluk için responsive eklemeler */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 1rem;
+    height: auto;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 140px;
+    margin: 0 auto;
+  }
+
+  nav {
+    margin: 1rem 0 0 0;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 16px;
+  }
+
+  main.educations {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+
+  .education-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .education-card {
+    height: auto;
+    max-height: none;
+  }
+
+  .lesson-box {
+    padding: 20px;
+    margin: 15px 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+}
